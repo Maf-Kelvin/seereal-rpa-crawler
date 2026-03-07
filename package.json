@@ -1,0 +1,13 @@
+{
+  "name": "quest1-rpa-crawler",
+  "version": "1.0.0",
+  "description": "RPA PDF crawler — auto selector detection, no hardcoded CSS",
+  "main": "crawl.js",
+  "scripts": {
+    "start": "node crawl.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "puppeteer-core": "^24.38.0"
+  }
+}

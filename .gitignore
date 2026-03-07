@@ -1,0 +1,19 @@
+# Environment
+.env
+
+# Dependencies
+node_modules/
+
+# Downloaded PDFs
+downloads/
+
+# Debug artifacts
+debug_*.png
+debug_*.html
+debug_*.json
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
