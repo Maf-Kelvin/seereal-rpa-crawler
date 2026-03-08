@@ -6,7 +6,12 @@ const path = require('path');
 const ADDRESS      = process.env.SEARCH_ADDRESS;
 const TARGET_URL   = process.env.TARGET_URL   || 'https://seereal.lh.or.kr/main.do';
 const DOWNLOAD_DIR = process.env.DOWNLOAD_DIR || './downloads';
-const CHROME_PATH  = process.env.CHROME_PATH  || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const CHROME_DEFAULTS = {
+  win32:  'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+  darwin: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+  linux:  '/usr/bin/google-chrome',
+};
+const CHROME_PATH = process.env.CHROME_PATH || CHROME_DEFAULTS[process.platform] || 'google-chrome';
 const PDF_COUNT    = parseInt(process.env.PDF_COUNT || '3');
 const DEBUG_PORT   = parseInt(process.env.CHROME_DEBUG_PORT || '9222');
 
